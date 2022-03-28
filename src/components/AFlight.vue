@@ -44,7 +44,8 @@ export default defineComponent({
     methods: {
         dateFromDateTime(datetime) {
             const dateTimeType = new Date(datetime)
-            return new String(dateTimeType.getDate()).padStart(2,'0') + '.' + new String(dateTimeType.getMonth()+1).padStart(2,'0') + '.' + dateTimeType.getFullYear() 
+            //return new String(dateTimeType.getDate()).padStart(2,'0') + '.' + new String(dateTimeType.getMonth()+1).padStart(2,'0') + '.' + dateTimeType.getFullYear() 
+            return dateTimeType.getFullYear() + "-" + new String(dateTimeType.getMonth()+1).padStart(2,'0') + "-" + new String(dateTimeType.getDate()).padStart(2,'0') 
         },
         timeFromDateTime(datetime) {
             const dateTimeType = new Date(datetime)
